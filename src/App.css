@@ -1,0 +1,265 @@
+/* LAYOUT  */
+.layout-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout-box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 40px;
+  width: 85%;
+  height: 85%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #604ca2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* HEADER  */
+.logo {
+  position: relative;
+  top: 8px;
+  font-size: 2rem;
+  color: #9073f1;
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header h2 {
+  letter-spacing: 3px;
+  font-size: 1.4em;
+}
+.button-section {
+  align-self: center;
+}
+.button-section button {
+  margin: 0 1rem;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+.btn-outline {
+  background-color: #fff;
+  border: 1.5px solid #9073f1;
+  color: #9073f1;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.btn-outline:hover {
+  background-color: #9073f1;
+  color: #fff;
+}
+.btn-filled {
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1em;
+}
+.btn-icon {
+  position: relative;
+  top: 4px;
+  right: 5px;
+  font-size: 1.2rem;
+}
+
+/* FOOTER  */
+.footer-text {
+  color: #9073f1;
+  text-align: center;
+}
+
+/* EDITOR SECTION  */
+.editor-section {
+  padding: 5% 10%;
+}
+.editor-section .image-section {
+  width: 15.5rem;
+  height: 15.5rem;
+  padding: 0 !important;
+}
+.mobile-btn-section {
+  display: none;
+}
+.uploded-img {
+  width: 100%;
+  height: 100%;
+}
+.btn-delete-filled {
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1em;
+}
+.color-picker {
+  display: block;
+  margin: 0 0 20px;
+}
+.image-action-section button {
+  cursor: pointer;
+  padding: 10px 30px;
+}
+.image-action-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    letter-spacing: 3px;
+    font-size: 1em;
+  }
+  .logo {
+    font-size: 1.8rem;
+  }
+  .button-section button {
+    margin: 0 0.5rem;
+    padding: 3px 20px 8px;
+  }
+  .btn-outline {
+    font-size: 0.8em;
+  }
+  .btn-filled {
+    font-size: 0.8em;
+  }
+  .btn-delete-filled {
+    font-size: 0.8em;
+  }
+  .image-action-section button {
+    padding: 3px 20px 8px;
+  }
+  .btn-icon {
+    top: 4px;
+    right: 5px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .header h2 {
+    letter-spacing: 3px;
+    font-size: 0.6em;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+  .button-section button {
+    margin: 0 0.5rem;
+    padding: 1px 10px 5px;
+  }
+  .btn-outline {
+    font-size: 0.5em;
+  }
+  .btn-filled {
+    font-size: 0.5em;
+  }
+  .btn-delete-filled {
+    font-size: 0.5em;
+  }
+  .image-action-section button {
+    padding: 1px 10px 5px;
+  }
+  .btn-icon {
+    top: 3px;
+    right: 5px;
+    font-size: 0.7rem;
+  }
+  .layout-box {
+    padding: 10px 15px;
+    width: 85%;
+    height: 100%;
+    margin: 20% 0;
+  }
+  .image-action-section {
+    display: flex;
+    flex-direction: row;
+  }
+  .image-action-section div:nth-child(3) {
+    align-self: center;
+  }
+  .image-action-section div p {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 376px) {
+  .editor-section {
+    padding: 5% 10%;
+  }
+  .layout-box {
+    justify-content: space-around;
+  }
+  .header {
+    display: block;
+  }
+  .header h2 {
+    letter-spacing: 3px;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .logo {
+    font-size: 1.8rem;
+  }
+  .btn-mob-outline {
+    font-size: 0.5em;
+    background-color: #fff;
+    border: 1.5px solid #9073f1;
+    color: #9073f1;
+    transition: 0.3s;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .btn-mob-filled {
+    font-size: 0.5em;
+    color: #fff;
+    font-weight: bold;
+    width: 80%;
+    border: none;
+    margin-bottom: 10px;
+  }
+  .image-action-section button {
+    padding: 1px 8px 5px;
+  }
+  .btn-delete-filled {
+    font-size: 0.5em;
+    width: 80%;
+    padding: 1px 8px 5px;
+    font-weight: bold;
+  }
+  .btn-icon {
+    top: 4px;
+    right: 5px;
+    font-size: 0.8rem;
+  }
+  .btn-mob-icon {
+    position: relative;
+    top: 3px;
+    right: 5px;
+    font-size: 0.8rem;
+  }
+  .button-section {
+    display: none !important;
+  }
+  .mobile-btn-section {
+    display: block;
+    padding: 0 5px;
+  }
+  .delete-btn-section {
+    display: none;
+  }
+}
+@media (max-width: 326px) {
+  .editor-section {
+    padding: 5%;
+  }
+  .footer-text {
+    font-size: 0.6em;
+  }
+}
