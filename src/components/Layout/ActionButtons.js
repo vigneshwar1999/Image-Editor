@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 import { commonActions } from "../../Store/Reducers/CommonReducer";
+import { getTransparentImage } from "../../api/api";
 
-const ActionButtons = ({ downClass, upClass, iconClass}) => {
+const ActionButtons = ({ downClass, upClass, iconClass }) => {
   const hiddenFileInputRef = useRef(null);
   const dispatch = useDispatch();
 
@@ -17,9 +18,13 @@ const ActionButtons = ({ downClass, upClass, iconClass}) => {
   const handleUploadClick = () => hiddenFileInputRef.current.click();
 
   // Storing uploaded image on redux state whenever onChange event happens on file input.
-  const handleUploadChange = (event) => {
-    const imageUploaded = URL.createObjectURL(event.target.files[0]);
-    dispatch(commonActions.setSelectedFile(imageUploaded));
+  const handleUploadChange = async (event) => {
+    const formData = new FormData();
+    formData.append("size", "auto");
+    formData.append("image_file", event.target.files[0]);
+    const blobUrl = await getTransparentImage(formData)
+    console.log("blobUrl",blobUrl);
+    dispatch(commonActions.setSelectedFile(blobUrl));
     dispatch(commonActions.setSelectedBackgroungColor("#ffffff"));
   };
 
