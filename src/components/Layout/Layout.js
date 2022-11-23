@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
           <Header />
           {children}
           <h6 className="footer-text">
-            © {new Date().getFullYear()} | All rights reserved | Made with ❤ -
+            © {new Date().getFullYear()} | All rights reserved | Made with <span style={{ color: "red" }}>❤</span> -
             VIGNESHWAR
           </h6>
         </div>
